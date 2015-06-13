@@ -8,6 +8,10 @@ using namespace std;
 
 int main()
 {
+    Stopwatch sw;
+
+    sw.start();
+
 	size_t n = 600851475143;
     size_t z = n;
 	vector<size_t> factors;
@@ -24,7 +28,7 @@ int main()
         }
     }
 
-    cout << strjoin(factors, " * ");
-
+    cout << strjoin(factors, " * ") << endl;
+    cout << sw.get();
 	return 0;
 }
